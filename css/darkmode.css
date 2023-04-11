@@ -1,0 +1,118 @@
+
+
+html {
+    background-color: #191919;
+}
+
+body {
+    background-color: #191919;
+}
+
+.search-bar-container input {
+    background-color: #191919;
+    color: #f4f4f4;
+}
+
+#menu {
+    background-color: #191919;
+}
+
+#menu a {
+    color: #f4f4f4;
+}
+
+#menu a:hover {
+    color: #f4f4f4;
+}
+
+.centered-section {
+    background-color: #191919;
+}
+
+#about {
+    background-color: #191919;
+}
+
+#about .right .about-text h1 {
+    color: #f4f4f4;
+}
+
+
+#about .right .about-text p {
+    color: #f4f4f4;
+}
+
+#about .right a {
+    color: #f4f4f4;
+}
+
+#contact {
+    background-color: #191919;
+}
+
+#contact .center .inputs {
+    color: #f4f4f4;
+    background-color: #191919;
+    border: 1px solid #f4f4f4;
+}
+
+#contact .center h1 {
+    color: #F4F4F4;
+}
+
+#contact .right .contact-list a {
+    color: #F4F4F4;
+}
+
+#catalog {
+    background-color: #191919;
+}
+
+.dropdown-content a:hover {
+    background-color: #191919;
+}
+
+.container-galeria {
+    background-color: #191919;
+}
+
+.card {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+    border: none;
+}
+
+#emptySelection p {
+    color: #F4F4F4;
+}
+
+.button-container {
+    background-color: #191919;
+}
+
+.infos-model .info-1-model h1 {
+    color: #f4f4f4;
+}
+
+.infos-model .info-2-model td {
+    color: #f4f4f4;
+}
+
+#encontrarModelo {
+    background-color: #191919;
+}
+
+#querSerModelo {
+    background-color: #191919;
+}
+
+#querSerModelo h1, p {
+    color: #f4f4f4;
+}
+
+.container-formulario-querSerModelo .text-form-querSerModelo {
+    color: #F4F4F4;
+}
+
+.container-formulario-querSerModelo .form-querSerModelo  input {
+    background-color: #191919;
+}

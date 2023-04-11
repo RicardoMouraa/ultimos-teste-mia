@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--CSS stylesheet-->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <!-- Importação do Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    integrity="sha512-FTvS8RE7V+jU6QzOm6adPIS4Y8b6VYZf/2B/9TmvT76r8XXJSrBwMCGOcN/tto05OgiM/HcNfiPKOy3q9XGX0g=="
+    crossorigin="anonymous" />
+
+  <!-- Importação do Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+    integrity="sha512-KKjcahZfYgNoW8aepKx/T9vwq1vLCCdFKoLpCBiKwCZNYnQYF1kiE8CrViRuyxkX0zA+CjKilW8IB+AlwvuF5A=="
+    crossorigin="anonymous"></script>
+
+
+
+
+  <title>MIA - MODELS</title>
+</head>
+
+<body>
+  <!--INICIO NAVBAR E MENU-->
+  <nav id="navbar">
+    <div class="menu-icons">
+      <img src="img/icons/icon-menu-secundary.svg" alt="menu icon" class="svg-menu darkmode">
+      <i class="menu-text">Menu</i>
+    </div>
+    <div class="navbar-logo">
+      <a href="index.html"><img src="img/logos/logo-home-white.svg" alt="logo" class="logo darkmode"></a>
+    </div>
+    <div class="nav-icons">
+      <div id="navbarHeartIcon">
+        <img src="img/icons/icon-casting-secundary.svg" alt="heart icon" class="svg-heart darkmode">
+        <div class="notification-badge" style="display: none;"></div>
+      </div>
+      <img src="img/icons/icon-pesquisa-secundary.svg" alt="search icon" class="svg-search darkmode" onclick="toggleSearchBar()">
+
+    </div>
+  </nav>
+  <div class="overlay"></div>
+
+  
+  
+
+  <div id="menu" class="menu-oculto-text darkmode">
+    <a href="index.html">Inicio</a>
+    <a href="catalog.html">Modelos</a>
+    <a href="feminino.html">Feminino</a>
+    <a href="masculino.html">Masculino</a>
+    <a href="kids.html" class="space">Kids</a>
+    <a href="#">Encontrar Modelo</a>
+    <a href="selectedCards.html" class="space">Meu Casting</a>
+    <a href="contact.html">Contato</a>
+    <a href="quer-ser-modelo.html">Quer ser modelo?</a>
+    <a href="about.html">Sobre a MIA</a>
+    <a href="#" id="toggleColors"><img src="/img/icons/night-mode.svg" alt=""></a>
+  </div>
+  <!--FIM NAVBAR E MENU-->
+
+  <div class="search-bar-container darkmode">
+    <input type="text" id="search-bar" placeholder="Digite o nome do modelo" />
+  </div>
+
+
+  <section id="catalog">
+    <div class="filters">
+      <div class="dropdown">
+        <button class="dropdown-btn" data-filter-name="corDosOlhos" data-default-text="Cor dos olhos">Cor dos
+          olhos</button>
+        <div class="dropdown-content">
+          <a href="#" data-filter-value="verde">Verde</a>
+          <a href="#" data-filter-value="azul">Azul</a>
+          <a href="#" data-filter-value="castanho-escuro">Castanho escuro</a>
+          <a href="#" data-filter-value="castanho-claro">Castanho claro</a>
+        </div>
+        <div class="tags-container"></div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn" data-filter-name="corDoCabelo" data-default-text="Cor do cabelo">Cor do
+          cabelo</button>
+        <div class="dropdown-content">
+          <a href="#" data-filter-name="Cor do cabelo" data-filter-value="loiro">Loiro</a>
+          <a href="#" data-filter-name="Cor do cabelo" data-filter-value="ruivo">Ruivo</a>
+          <a href="#" data-filter-name="Cor do cabelo" data-filter-value="castanho">Castanho</a>
+          <a href="#" data-filter-name="Cor do cabelo" data-filter-value="preto">Preto</a>
+          <a href="#" data-filter-name="Cor do cabelo" data-filter-value="outras">Outras</a>
+        </div>
+        <div class="tags-container"></div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn" data-filter-name="tiposDeModelos" data-default-text="Tipos de Modelos">Tipos de
+          Modelos</button>
+        <div class="dropdown-content">
+          <a href="#" data-filter-name="Tipos de Modelos" data-filter-value="masculino">Masculino</a>
+          <a href="#" data-filter-name="Tipos de Modelos" data-filter-value="feminino">Feminino</a>
+          <a href="#" data-filter-name="Tipos de Modelos" data-filter-value="kids">Kids</a>
+        </div>
+        <div class="tags-container"></div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-btn" data-default-text="Inicial">Inicial</button>
+        <div class="dropdown-content alfabeto">
+          <a href="#">A</a>
+          <a href="#">B</a>
+          <a href="#">C</a>
+          <a href="#">D</a>
+          <a href="#">E</a>
+          <a href="#">F</a>
+          <a href="#">G</a>
+          <a href="#">H</a>
+          <a href="#">I</a>
+          <a href="#">J</a>
+          <a href="#">K</a>
+          <a href="#">L</a>
+          <a href="#">M</a>
+          <a href="#">N</a>
+          <a href="#">O</a>
+          <a href="#">P</a>
+          <a href="#">Q</a>
+          <a href="#">R</a>
+          <a href="#">S</a>
+          <a href="#">T</a>
+          <a href="#">U</a>
+          <a href="#">V</a>
+          <a href="#">W</a>
+          <a href="#">X</a>
+          <a href="#">Y</a>
+          <a href="#">Z</a>
+        </div>
+        <div class="tags-container"></div>
+      </div>
+
+      <button id="btn-buscar" class="">Buscar</button>
+      <button id="btn-limpar" class="">Limpar Filtros</button>
+      <div class="tags-container"></div>
+
+    </div>
+
+    <div class="container-galeria">
+
+      <div class="card" data-id="1" data-cor-dos-olhos="verde" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="160" data-busto="80" data-cintura="60" data-quadril="91" data-sapato="35" data-imagens-extras="img/model/BÁRBARA ROCHA/Barbara Rocha (1).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (2).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (3).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (4).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (5).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (6).jpeg,  img/model/BÁRBARA ROCHA/Barbara Rocha (7).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (8).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (9).jpeg, img/model/BÁRBARA ROCHA/Barbara Rocha (10).jpeg" data-imagem-horizontal="img/model/BÁRBARA ROCHA/Barbara Rocha (horizontal).jpeg">
+        <div class="img-card">
+          <img src="img/model/BÁRBARA ROCHA/Barbara Rocha (card).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          Bárbara Rocha
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="2" data-cor-dos-olhos="verde" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="160" data-busto="80" data-cintura="60" data-quadril="91" data-sapato="35" data-imagens-extras="img/model/ARYANA LUIZA/Aryana Luiza (1).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (2).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (3).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (4).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (5).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (6).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (7).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (8).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (9).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (10).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (11).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (12).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (13).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (14).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (15).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (16).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (17).jpeg, img/model/ARYANA LUIZA/Aryana Luiza (18).jpeg" data-imagem-horizontal="img/model/BÁRBARA ROCHA/Barbara Rocha (horizontal).jpeg">
+        <div class="img-card">
+          <img src="img/model/ARYANA LUIZA/Aryana Luiza (capa).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          Aryana Luiza
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="3" data-cor-dos-olhos="azul" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="171" data-busto="86" data-cintura="69" data-quadril="92" data-sapato="39" data-imagens-extras="img/model/AISHA WOLFRAM/Aisha Wolfram (1).jpeg, img/model/AISHA WOLFRAM/Aisha Wolfram (2).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (3).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (4).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (5).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (6).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (7).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (8).jpeg,  img/model/AISHA WOLFRAM/Aisha Wolfram (9).jpeg" data-imagem-horizontal="">
+        <div class="img-card">
+          <img src="img/model/AISHA WOLFRAM/Aisha Wolfram (card).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          AISHA WOLFRAM
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="4" data-cor-dos-olhos="castanho" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="178" data-busto="84" data-cintura="61" data-quadril="89" data-sapato="36" data-imagens-extras="img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (1).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (2).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (3).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (4).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (5).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (6).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (7).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (8).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (9).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (10).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (11).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (12).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (13).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (14).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (15).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (16).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (17).jpeg, img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (18).jpeg" data-imagem-horizontal="img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (horizontal).jpeg">
+        <div class="img-card">
+          <img src="img/model/ALESSANDRA KOZLOSKI/Alessandra Kozloski (card).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          Alessandra Kozloski
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="5" data-cor-dos-olhos="castanho" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="177" data-busto="82" data-cintura="64" data-quadril="91" data-sapato="39" data-imagens-extras="img/model/ALLANIS FRANZINI/Allanis Franzini (1).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (2).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (3).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (4).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (5).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (6).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (7).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (8).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (9).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (10).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (11).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (12).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (13).jpeg, img/model/ALLANIS FRANZINI/Allanis Franzini (14).jpeg" data-imagem-horizontal="">
+        <div class="img-card">
+          <img src="img/model/ALLANIS FRANZINI/Allanis Franzini (card).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          ALLANIS FRANZINI
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-id="6" data-cor-dos-olhos="castanho" data-cor-do-cabelo="castanho"
+        data-tipos-de-modelos="feminino" data-selected="false" data-altura="171" data-busto="83" data-cintura="65" data-quadril="91" data-sapato="37" data-imagens-extras="img/model/AMANDA BITTENCOURT/Amanda Bittencourt (1).jpeg, img/model/AMANDA BITTENCOURT/Amanda Bittencourt (2).jpeg, img/model/AMANDA BITTENCOURT/Amanda Bittencourt (3).jpeg, img/model/AMANDA BITTENCOURT/Amanda Bittencourt (4).jpeg, img/model/AMANDA BITTENCOURT/Amanda Bittencourt (5).jpeg, img/model/AMANDA BITTENCOURT/Amanda Bittencourt (6).jpeg" data-imagem-horizontal="">
+        <div class="img-card">
+          <img src="img/model/AMANDA BITTENCOURT/Amanda Bittencourt (card).jpeg" alt="model">
+          <div class="overlay">
+            <a href="model.html">Veja mais</a>
+          </div>
+        </div>
+        <div class="title">
+          Amanda Bittencourt
+          <div class="icon" onclick="trocarIcone()">
+            <img id="heart-icon" src="img/icons/icon-casting-secundary.svg" alt="icone casting"
+              class="svg-heart heart-icon">
+          </div>
+        </div>
+      </div>
+      
+      
+
+    </div>
+
+
+  </section>
+
+
+
+  <footer>
+    <div class="footer-container darkmode">
+      <div class="footer-icons">
+
+        <a href="#" target="_blank">
+          <img src="img/icons/icon-whatsapp-white.svg" alt="fa-whatsapp icon" class="svg-whatsapp">
+        </a>
+        <a href="https://www.facebook.com/miamodelmanagement/" target="_blank">
+          <img src="img/icons/icon-facebook-white.svg" alt="instagram icon" class="svg-facebook">
+        </a>
+        <a href="https://www.instagram.com/miamodelmgt/" target="_blank">
+          <img src="img/icons/icon-instagram-white.svg" alt="instagram icon" class="svg-instagram">
+        </a>
+        <a href="https://www.tiktok.com/@miamodel" target="_blank">
+          <img src="img/icons/icon-tiktok-white.svg" alt="tiktok icon" class="svg-tiktok">
+        </a>
+
+      </div>
+      <div class="copyright">&copy; COPYRIGHT 2023 MIA MODEL MANAGEMENT │ <span class="privacidade"><a
+            href="Documents/Site Mia Model - Politica de privacidade.pdf" target="_blank">Política de
+            privacidade</a></span></div>
+    </div>
+  </footer>
+
+  <script src="js/cadastro_modelos.js"></script>
+  <script src="js/pagina-model-dinamic.js"></script>
+  <script src="js/light-dark-mode.js"></script>
+  <script src="js/search-navbar.js"></script>
+  <script src="js/casting-email.js"></script>
+  <script src="js/casting-select.js"></script>
+  <script src="js/casting-whatsapp.js"></script>
+  <script src="js/form-casting.js"></script>
+  <script src="js/paginas-modelos-generos.js"></script>
+  <script src="js/querSerModelo.js"></script>
+  <script src="js/script-filtro-function.js"></script>
+  <script src="js/script-filtro.js"></script>
+  <script src="js/script-filtro2.js"></script>
+  <script src="js/script-footer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

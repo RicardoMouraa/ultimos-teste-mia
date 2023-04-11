@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--CSS stylesheet-->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <!-- Importação do Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    integrity="sha512-FTvS8RE7V+jU6QzOm6adPIS4Y8b6VYZf/2B/9TmvT76r8XXJSrBwMCGOcN/tto05OgiM/HcNfiPKOy3q9XGX0g=="
+    crossorigin="anonymous" />
+
+  <!-- Importação do Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+    integrity="sha512-KKjcahZfYgNoW8aepKx/T9vwq1vLCCdFKoLpCBiKwCZNYnQYF1kiE8CrViRuyxkX0zA+CjKilW8IB+AlwvuF5A=="
+    crossorigin="anonymous"></script>
+
+
+
+
+  <title>MIA - MODELS</title>
+</head>
+
+<body>
+  <!--INICIO NAVBAR E MENU-->
+  <nav id="navbar">
+    <div class="menu-icons">
+      <img src="img/icons/icon-menu-secundary.svg" alt="menu icon" class="svg-menu darkmode">
+      <i class="menu-text">Menu</i>
+    </div>
+    <div class="navbar-logo">
+      <a href="index.html"><img src="img/logos/logo-home-white.svg" alt="logo" class="logo darkmode"></a>
+    </div>
+    <div class="nav-icons">
+      <div id="navbarHeartIcon">
+        <img src="img/icons/icon-casting-secundary.svg" alt="heart icon" class="svg-heart darkmode">
+        <div class="notification-badge" style="display: none;"></div>
+      </div>
+      <img src="img/icons/icon-pesquisa-secundary.svg" alt="search icon" class="svg-search darkmode" onclick="toggleSearchBar()">
+
+    </div>
+  </nav>
+  <div class="overlay"></div>
+
+  
+  
+
+  <div id="menu" class="menu-oculto-text darkmode">
+    <a href="index.html">Inicio</a>
+    <a href="catalog.html">Modelos</a>
+    <a href="feminino.html">Feminino</a>
+    <a href="masculino.html">Masculino</a>
+    <a href="kids.html" class="space">Kids</a>
+    <a href="#">Encontrar Modelo</a>
+    <a href="selectedCards.html" class="space">Meu Casting</a>
+    <a href="contact.html">Contato</a>
+    <a href="quer-ser-modelo.html">Quer ser modelo?</a>
+    <a href="about.html">Sobre a MIA</a>
+    <a href="#" id="toggleColors"><img src="/img/icons/night-mode.svg" alt=""></a>
+  </div>
+  <!--FIM NAVBAR E MENU-->
+
+  <div class="search-bar-container darkmode">
+    <input type="text" id="search-bar" placeholder="Digite o nome do modelo" />
+  </div>
+
+    <section id="contact">
+        <div class="left">
+            <img src="img/contact-image.jpg" alt="contact image" class="contact-image">
+        </div>
+
+        <div class="center popup" id="popup-formulario">
+            <h1>CONTATO</h1>
+            <form id="formulario-contato">
+                <div>
+                    <input type="text" placeholder="Nome" class="inputs">
+                    <span class="span-inputs">O nome deve ter no mínimo 3 caracteres</span>
+                </div>
+                <div>
+                    <input type="email" placeholder="E-mail" class="inputs">
+                    <span class="span-inputs">Digite um email válido</span>
+                </div>
+                <div>
+                    <input type="number" placeholder="Número de Telefone" class="inputs">
+                    <span class="span-inputs">Digite um telefone válido</span>
+                </div>
+                <div>
+                    <input type="text" placeholder="Empresa (Opcional)" class="inputs">
+                </div>
+                <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10"
+                    placeholder="Por favor, conte-nos um pouco sobre o projeto, quantas diárias vão ser, nome da marca e a data do projeto. Nós iremos analisar as possibilidades de data do modelo e lhe enviaremos as opções imediatamente!"></textarea>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <div class="right-contact">
+                <div class="contact-icons">
+                    <a href="https://wa.me/5547992460926"><img src="/img/icons/icon-whatsapp-black.svg" alt="whatsapp"></a>
+                    <a href="mailto:contato@miamodels.com.br"><img src="/img/icons/icon-email-black.svg" alt="email"></a>
+                </div>
+                <ul class="contact-list">
+                  <li><a href="https://www.google.com/maps/search/?api=1&query=AVENIDA+BRASIL,+1500+-+centro,+Balneario+Camboriu">AVENIDA BRASIL, 1500 -</a></li>
+                  <li><a href="https://www.google.com/maps/search/?api=1&query=AVENIDA+BRASIL,+1500+-+centro,+Balneario+Camboriu">SIBARA CENTER, SALA 430 4°ANDAR</a></li>
+                  <li><a href="https://www.google.com/maps/search/?api=1&query=AVENIDA+BRASIL,+1500+-+centro,+Balneario+Camboriu">BALNEÁRIO CAMBORIÚ, SC - 88330-901</a></li>
+                  <li><a href="tel:+554730563476">T +55 47 3056.3476</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+      <div class="footer-container darkmode">
+        <div class="footer-icons">
+  
+          <a href="#" target="_blank">
+            <img src="img/icons/icon-whatsapp-white.svg" alt="fa-whatsapp icon" class="svg-whatsapp">
+          </a>
+          <a href="https://www.facebook.com/miamodelmanagement/" target="_blank">
+            <img src="img/icons/icon-facebook-white.svg" alt="instagram icon" class="svg-facebook">
+          </a>
+          <a href="https://www.instagram.com/miamodelmgt/" target="_blank">
+            <img src="img/icons/icon-instagram-white.svg" alt="instagram icon" class="svg-instagram">
+          </a>
+          <a href="https://www.tiktok.com/@miamodel" target="_blank">
+            <img src="img/icons/icon-tiktok-white.svg" alt="tiktok icon" class="svg-tiktok">
+          </a>
+  
+        </div>
+        <div class="copyright">&copy; COPYRIGHT 2023 MIA MODEL MANAGEMENT │ <span class="privacidade"><a
+              href="Documents/Site Mia Model - Politica de privacidade.pdf" target="_blank">Política de
+              privacidade</a></span></div>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  
+    <script src="js/light-dark-mode.js"></script>
+    <script src="js/search-navbar.js"></script>
+    <script src="js/casting-email.js"></script>
+    <script src="js/casting-select.js"></script>
+    <script src="js/casting-whatsapp.js"></script>
+    <script src="js/form-casting.js"></script>
+    <script src="js/paginas-modelos-generos.js"></script>
+    <script src="js/querSerModelo.js"></script>
+    <script src="js/script-filtro-function.js"></script>
+    <script src="js/script-filtro.js"></script>
+    <script src="js/script-filtro2.js"></script>
+    <script src="js/script-footer.js"></script>
+    <script src="js/script-navbar.js"></script>
+    <script src="js/script.js"></script>
+    </body>
+
+</html>
