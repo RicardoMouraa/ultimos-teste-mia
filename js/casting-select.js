@@ -1,4 +1,4 @@
-function addClickEventToVejaMais(link) {
+function adicionarEventoClick(link, redirectURL) {
     link.addEventListener('click', function (event) {
         event.stopPropagation();
         event.preventDefault();
@@ -10,16 +10,10 @@ function addClickEventToVejaMais(link) {
         localStorage.setItem('modelId', modelId);
         localStorage.setItem('modelTitle', modelTitle);
 
-        window.location.href = 'model.html';
+        // Redirecionando para a página especificada
+        window.location.href = redirectURL;
     });
 }
-
-function adicionarEventoClick(link, redirectURL) {
-
-    
-    addClickEventToVejaMais(link);
-}
-  
 
 
 function loadData() {
@@ -30,12 +24,14 @@ function loadData() {
     const selectedCardsElement = document.querySelector('.container-galeria');
     const buttonContainer = document.querySelector('.button-container');
     
+    
     let selectedCards = [];
     let isLoading = false;
 
     function getModelImageUrl(modelId) {
         // Use o ID do modelo para criar o nome do arquivo da imagem
         const imageName = `model-${modelId}.svg`;
+        
 
         // Retorne a URL da imagem completa
         return `img/model/${imageName}`;
@@ -52,6 +48,15 @@ function loadData() {
             const cardCorDosOlhos = card.getAttribute('data-cor-dos-olhos');
             const cardCorDoCabelo = card.getAttribute('data-cor-do-cabelo');
             const cardTiposDeModelos = card.getAttribute('data-tipos-de-modelos');
+            const cardAltura = card.getAttribute('data-altura');
+            const cardBusto = card.getAttribute('data-busto');
+            const cardCintura = card.getAttribute('data-cintura');
+            const cardQuadril = card.getAttribute('data-quadril');
+            const cardSapato = card.getAttribute('data-sapato');
+            const cardImagensExtras = card.getAttribute('data-imagens-extras');
+            const cardImagemHorizontal = card.getAttribute('data-imagem-horizontal');
+
+            
             const cardModelId = card.getAttribute('data-model-id');
 
             if (cardHeartIcon.getAttribute('src') === 'img/icons/icon-casting-secundary.svg') {
@@ -63,6 +68,13 @@ function loadData() {
                     corDosOlhos: cardCorDosOlhos,
                     corDoCabelo: cardCorDoCabelo,
                     tiposDeModelos: cardTiposDeModelos,
+                    altura: cardAltura,
+                    busto: cardBusto,
+                    cintura: cardCintura,
+                    quadril: cardQuadril,
+                    sapato: cardSapato,
+                    imagensExtras: cardImagensExtras,
+                    imagemHorizontal: cardImagemHorizontal,
                     imagePath: card.querySelector('.img-card img').getAttribute('src')
                 });
             } else {
@@ -139,6 +151,13 @@ function loadData() {
                 cardElement.setAttribute('data-cor-dos-olhos', selectedCard.corDosOlhos);
                 cardElement.setAttribute('data-cor-do-cabelo', selectedCard.corDoCabelo);
                 cardElement.setAttribute('data-tipos-de-modelos', selectedCard.tiposDeModelos);
+                cardElement.setAttribute('data-altura', selectedCard.altura);
+                cardElement.setAttribute('data-busto', selectedCard.busto);
+                cardElement.setAttribute('data-cintura', selectedCard.cintura);
+                cardElement.setAttribute('data-quadril', selectedCard.quadril);
+                cardElement.setAttribute('data-sapato', selectedCard.sapato);
+                cardElement.setAttribute('data-imagens-extras', selectedCard.imagensExtras);
+                cardElement.setAttribute('data-imagem-horizontal', selectedCard.imagemHorizontal);
                 cardElement.setAttribute('data-selected', true);
                 const imgCardElement = document.createElement('div');
                 imgCardElement.classList.add('img-card');
@@ -151,7 +170,6 @@ function loadData() {
                 const linkElement = document.createElement('a');
                 linkElement.setAttribute('href', `model.html?id=${selectedCard.id}`);
                 linkElement.textContent = 'Veja mais';
-                addClickEventToVejaMais(linkElement); // Adicione esta linha
                 overlayElement.appendChild(linkElement);
                 imgCardElement.appendChild(overlayElement);
                 cardElement.appendChild(imgCardElement);

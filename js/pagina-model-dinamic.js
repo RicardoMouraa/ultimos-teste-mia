@@ -1,10 +1,16 @@
-// Função para adicionar um evento de clique para cada link 'Veja mais'
-function adicionarEventoClick(link, redirectURL) {
-  link.addEventListener('click', (event) => {
+function adicionarEventosAosOverlays() {
+  const overlays = document.querySelectorAll('.card .overlay');
+  overlays.forEach((overlay) => adicionarEventoClick(overlay, 'model.html'));
+}
+
+
+// Função modificada para lidar com cliques apenas no elemento .overlay
+function adicionarEventoClick(overlay, redirectURL) {
+  overlay.addEventListener('click', (event) => {
     event.preventDefault(); // Impedindo a ação padrão do link
 
-    // Pegando as informações do card que contém o link clicado
-    const card = link.closest('.card');
+    // Pegando as informações do card que contém o overlay clicado
+    const card = overlay.closest('.card');
     const id = card.dataset.id;
     const nome = card.querySelector('.title').textContent;
     const altura = card.dataset.altura;
@@ -41,6 +47,10 @@ function adicionarEventoClick(link, redirectURL) {
     window.location.href = redirectURL;
   });
 }
+
+// Adicionando evento de clique a cada elemento .overlay
+const overlays = document.querySelectorAll('.card .overlay');
+overlays.forEach((overlay) => adicionarEventoClick(overlay, 'model.html'));
 
 function preencherGaleria() {
   const galeria = document.querySelector('.galeria');
@@ -181,6 +191,8 @@ if (modelo) {
 
   // Preenchendo a galeria de imagens na página model.html
   preencherGaleria();
+  adicionarEventosAosOverlays();
+
 }
 
 // Adicionando um evento para remover o modelo do localStorage quando o usuário volta para a lista de modelos
@@ -190,3 +202,4 @@ if (voltarLink) {
     localStorage.removeItem('modelo');
   });
 }
+
